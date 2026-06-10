@@ -208,7 +208,7 @@ RSpec.describe "Api::V1::CompanyA::FmController", type: :request do
 
         expect(JSON.parse(response.body)).to eq(
           "success" => false,
-          "error" => "Invalid JSON payload"
+          "error" => "Invalid JSON: expected object key, got 'invalid_json' at line 1 column 2"
         )
       end
     end

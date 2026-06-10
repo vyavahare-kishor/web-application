@@ -5,8 +5,8 @@ module Api::V1
     before_action :authenticate!
 
     def receive
-      payload  = parse_payload
-      validate!(payload)
+      payload = utils.parse(request)
+      utils.validate!(payload)
       processor.process(payload)
       render json: { success: true, message: "Webhook received" }, status: :ok
     rescue Common::Errors::AuthenticationError => e
@@ -24,14 +24,6 @@ module Api::V1
 
     def utils
       raise NotImplementedError, "utils must be implemented in subclass"
-    end
-
-    def parse_payload
-      raise NotImplementedError, "payload parse must be implemented in subclass"
-    end
-
-    def validate!(payload)
-      raise NotImplementedError, "payload validation must be implemented in subclass"
     end
 
     def processor
