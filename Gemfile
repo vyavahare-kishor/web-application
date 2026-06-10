@@ -19,3 +19,4 @@ group :development, :test do
 end
 
 gem "rubocop-rails-omakase", "~> 1.1"
+gem "rexml"

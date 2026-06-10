@@ -1,7 +1,7 @@
 module Api::V1
   class IntegrationsController < ApplicationController
-    include AuthenticatedIntegration
+    include Common::Concerns::AuthenticatedIntegration
 
-    before_action :authenticate_integration!
+    before_action :authenticate!
   end
 end

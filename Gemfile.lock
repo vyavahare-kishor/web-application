@@ -242,6 +242,7 @@ GEM
       io-console (~> 0.5)
     rerun (0.14.0)
       listen (~> 3.0)
+    rexml (3.4.4)
     rspec-core (3.13.6)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.5)
@@ -327,6 +328,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 7.2.3)
   rerun
+  rexml
   rspec-rails (~> 7.0)
   rubocop-rails-omakase (~> 1.1)
   tzinfo-data
