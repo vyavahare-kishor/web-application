@@ -129,7 +129,7 @@ RSpec.describe "Api::V1::CompanyA::MmController", type: :request do
 
         expect(JSON.parse(response.body)).to eq(
           "success" => false,
-          "error" => "Internal error: Something went wrong"
+          "error" => "Internal error: Unexpected error"
         )
       end
     end
